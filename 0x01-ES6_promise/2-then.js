@@ -12,7 +12,7 @@ function handleResponseFromAPI(promise) {
 }
 handleResponseFromAPI(true)
   .then()
-  .catch()
+  .catch(console.error())
   .finally(() => { console.log('Got a response from the API'); });
 
 export default handleResponseFromAPI;
