@@ -6,13 +6,13 @@ function handleResponseFromAPI(promise) {
         body: 'success',
       });
     } else {
-      reject(new Error(''));
+      reject(new Error());
     }
   });
 }
 handleResponseFromAPI(true)
   .then()
-  .catch((error) => { console.log(error); })
+  .catch()
   .finally(() => { console.log('Got a response from the API'); });
 
 export default handleResponseFromAPI;
