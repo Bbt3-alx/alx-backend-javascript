@@ -108,3 +108,7 @@ class StudentClass implements Student {
     return `${this.firstName}`
   }
 }
+
+const student1 = new StudentClass('Traore', 'Breh')
+
+console.log(`${student1.displayName()} is ${student1.workOnHomework()}`)
