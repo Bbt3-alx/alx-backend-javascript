@@ -69,13 +69,42 @@ interface Teacher {
     }
   }
 
-  const director1: Directors = {
-    firstName: 'John',
-    lastName: 'Doe',
-    location: 'London',
-    fullTimeEmployee: true,
-    numberOfReports: 17,
-  };
+//   const director1: Directors = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     location: 'London',
+//     fullTimeEmployee: true,
+//     numberOfReports: 17,
+//   };
 
-  console.log(director1);
+//   console.log(director1);
   
+function printTeacher(firstName: string, lastName: string){
+    return `${firstName[0]}. ${lastName}`
+}
+
+// console.log(printTeacher('Breh', 'Traore'))
+
+interface Student{
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string
+}
+
+class StudentClass implements Student {
+  firstName: string;
+  lastName: string;
+  constructor(firstName: string, lastName:string){
+    this.firstName = firstName,
+    this.lastName = lastName
+  }
+
+  workOnHomework(): string{
+    return `Currently working`
+  }
+
+  displayName(): string{
+    return `${this.firstName}`
+  }
+}
