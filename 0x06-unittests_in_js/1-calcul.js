@@ -1,9 +1,10 @@
 const calculateNumber = (type, a, b) => {
-	if (type === 'SUM') {
+	type_upper = type.toUpperCase();
+	if (type_upper === 'SUM') {
 		return Math.round(a) + Math.round(b);
-	} else if (type === 'SUBTRACT') {
+	} else if (type_upper === 'SUBTRACT') {
 		return Math.round(a) - Math.round(b);
-	} else if (type === 'DIVIDE') {
+	} else if (type_upper === 'DIVIDE') {
 		if (Math.round(b) === 0) {
 		return 'Error';
 		} else {
@@ -14,7 +15,7 @@ const calculateNumber = (type, a, b) => {
 module.exports = {
     calculateNumber
 };
-console.log(calculateNumber('SUM', 1.4, 4.5));
-console.log(calculateNumber('SUBTRACT', 1.4, 4.5));
-console.log(calculateNumber('DIVIDE', 1.4, 4.5));
-console.log(calculateNumber('DIVIDE', 1.4, 0));
+//console.log(calculateNumber('SUM', 1.4, 4.5));
+//console.log(calculateNumber('SUBTRACT', 1.4, 4.5));
+//console.log(calculateNumber('DIVIDE', 1.4, 4.5));
+//console.log(calculateNumber('DIVIDE', 1.4, 0));
