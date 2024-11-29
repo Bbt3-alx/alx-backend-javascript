@@ -1,13 +1,14 @@
-//const { expect } = require('chai');
-//const { describe, it } = require('mocha')
-//const should = require('chai.js').should();
-//const assert = require('chai.js').assert;
-//const { calculateNumber } = require('./1-calcul.js');
-import chai from 'chai';
-import { calculateNumber } from './1-calcul.js';
-import { describe, it } = 'mocha';
-const { expect } = chai;
-const { assert } = chai;
+const { expect } = require('chai');
+const { describe, it } = require('mocha')
+const should = require('chai').should();
+const assert = require('assert');
+const { calculateNumber } = require('./1-calcul.js');
+
+//import chai from 'chai';
+//import { calculateNumber } from './1-calcul.js';
+//import { describe, it } = 'mocha';
+//const { expect } = chai;
+//const { assert } = chai;
 
 describe('Tests Cases of chai', () => {
   describe('Test SUM', () => {
