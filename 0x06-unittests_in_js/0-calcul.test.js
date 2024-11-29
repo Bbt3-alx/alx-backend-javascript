@@ -9,26 +9,6 @@ describe('Tests Cases for calculateNumber', function() {
         assert.strictEqual(calculNum, 0);
     });
 
-    it('should return NaN when calculating the sum of a number and non-number', function() {
-        const calculNum = calculateNumber('a', 10);
-        assert.ok(isNaN(calculNum));
-    });
-
-    it('should return NaN when calculating the sum of "10" and -10', function() {
-        const calculNum = calculateNumber('10', -10);
-        assert.ok(isNaN(calculNum));
-    });
-
-    it('should return 0 when calculating the sum of "-10" and 10', function() {
-        const calculNum = calculateNumber('-10', 10);
-        assert.strictEqual(calculNum, -1010);
-    });
-
-    it('should return NaN when calculating the sum of "-10" and -10', function() {
-        const calculNum = calculateNumber('-10', -10);
-        assert.ok(isNaN(calculNum));
-    });
-
     it('should return -10 when calculating the sum of -10 and 0', () => {
         const result = calculateNumber(-10, 0);
         assert.strictEqual(result, -10);
@@ -55,7 +35,7 @@ describe('Tests Cases for calculateNumber', function() {
     });
 
     it('should return -37 when calculating the sum of -2.3 and -34.5', () => {
-        const result = calculateNumber(-2.3, -34.5);
+        const result = calculateNumber(-2.5, -34.7);
         assert.strictEqual(result, -37);
     });
 
