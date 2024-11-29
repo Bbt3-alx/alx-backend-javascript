@@ -9,7 +9,6 @@ describe('Tests Cases for calculateNumber', function() {
         assert.strictEqual(calculNum, 0);
     });
 
-    
     it('should return -10 when calculating the sum of -10 and 0', () => {
         const result = calculateNumber(-10, 0);
         assert.strictEqual(result, -10);
