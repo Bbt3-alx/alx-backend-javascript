@@ -39,11 +39,15 @@ const countStudents = (path) => new Promise(async function (resolve, reject) {
     for (const [field, students] of Object.entries(fields)) {
       console.log(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
     }
+    let result = `Number of students: ${totalStudents}\n`;
+    for (const [field, students] of Object.entries(fields)) {
+      result += `Number of students in ${field}: ${students.length}. List: ${students.join(", ")}\n`;
+    }
 
-    resolve(); // Resolve the promise if successful
+    resolve(result.trim()); // Resolve the promise if successful
   } catch (err) {
     reject(new Error('Cannot load the database'));
   }
 });
 
-module.exports = countStudents;
+module.exports = { countStudents };
